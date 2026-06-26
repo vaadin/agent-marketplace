@@ -104,7 +104,7 @@ Then reinstall or update `vaadin-skills` if needed.
 From a local checkout of this repository, add the marketplace by path:
 
 ```shell
-claude plugin marketplace add .
+claude plugin marketplace add ./
 codex plugin marketplace add .
 ```
 
