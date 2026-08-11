@@ -10,8 +10,9 @@
     {
       "name": "vaadin-skills",
       "source": {
-        "source": "github",
-        "repo": "vaadin/agent-skills"
+        "source": "url",
+        "url": "https://github.com/vaadin/agent-skills.git",
+        "ref": "main"
       },
       "description": "Skills and tools for building Vaadin 25 applications with Java/Flow — layouts, components, forms, testing, data, and reactive state management"
     }
