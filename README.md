@@ -12,6 +12,7 @@ The marketplace contains two plugins:
   validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM
   required at runtime) that can scaffold a new Vaadin project from
   start.vaadin.com and includes an Aura/Lumo theme-mixing checker.
+  **Experimental** - published for early testing; expect changes.
 
 The plugin implementations live in
 [`vaadin/agent-skills`](https://github.com/vaadin/agent-skills) and

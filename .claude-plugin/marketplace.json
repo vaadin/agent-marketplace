@@ -23,7 +23,7 @@
         "url": "https://github.com/vaadin/agent-tools.git",
         "ref": "main"
       },
-      "description": "Vaadin tools for AI agents — inspect and validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM required at runtime); includes an Aura/Lumo theme-mixing checker."
+      "description": "Experimental (early testing) — Vaadin tools for AI agents to bootstrap, inspect, and validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM required at runtime); scaffolds new projects from start.vaadin.com and includes an Aura/Lumo theme-mixing checker."
     }
   ]
 }
