@@ -15,6 +15,15 @@
         "ref": "main"
       },
       "description": "Skills and tools for building Vaadin 25 applications with Java/Flow — layouts, components, forms, testing, data, and reactive state management"
+    },
+    {
+      "name": "vaadin-agent-tools",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/vaadin/agent-tools.git",
+        "ref": "main"
+      },
+      "description": "Vaadin tools for AI agents — inspect and validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM required at runtime); includes an Aura/Lumo theme-mixing checker."
     }
   ]
 }

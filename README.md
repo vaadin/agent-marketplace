@@ -3,16 +3,21 @@
 This repository publishes Vaadin's agent plugin marketplace for Claude Code and
 Codex.
 
-The marketplace contains one plugin:
+The marketplace contains two plugins:
 
 - `vaadin-skills` - Vaadin 25 development skills and MCP tools for Java/Flow,
   layouts, components, forms, testing, data access, and reactive state
   management.
+- `vaadin-agent-tools` - Vaadin tools for AI agents to bootstrap, inspect, and
+  validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM
+  required at runtime) that can scaffold a new Vaadin project from
+  start.vaadin.com and includes an Aura/Lumo theme-mixing checker.
 
-The plugin implementation lives in
-[`vaadin/agent-skills`](https://github.com/vaadin/agent-skills). This repository
+The plugin implementations live in
+[`vaadin/agent-skills`](https://github.com/vaadin/agent-skills) and
+[`vaadin/agent-tools`](https://github.com/vaadin/agent-tools). This repository
 only contains the marketplace metadata that lets Claude Code and Codex discover
-and install that plugin.
+and install those plugins.
 
 ## Claude Code
 
@@ -24,24 +29,27 @@ In Claude Code, add the Vaadin marketplace:
 /plugin marketplace add vaadin/agent-marketplace
 ```
 
-Then install the plugin:
+Then install a plugin:
 
 ```shell
 /plugin install vaadin-skills@vaadin-marketplace
+/plugin install vaadin-agent-tools@vaadin-marketplace
 ```
 
-You can also browse and install it from `/plugin` by opening the marketplace
-browser and selecting `vaadin-skills`.
+You can also browse and install them from `/plugin` by opening the marketplace
+browser and selecting a plugin.
 
 ### Use
 
 The skills and MCP tools activate automatically when you ask Claude Code for
 help with Vaadin development. Example prompts:
 
+- "Bootstrap a new Vaadin project"
 - "Create a responsive master-detail view in Vaadin Flow"
 - "Add Binder validation to this form"
 - "Write UI unit tests for this view"
 - "Look up the current Vaadin documentation for Grid lazy loading"
+- "Check this project for Aura/Lumo theme mixing"
 
 ### Update
 
@@ -51,8 +59,8 @@ Refresh the marketplace catalog:
 /plugin marketplace update vaadin-marketplace
 ```
 
-Then update or reinstall `vaadin-skills` from the plugin manager if a newer
-version is available.
+Then update or reinstall `vaadin-skills` or `vaadin-agent-tools` from the plugin
+manager if a newer version is available.
 
 ## Codex
 
@@ -64,13 +72,14 @@ Add the Vaadin marketplace:
 codex plugin marketplace add vaadin/agent-marketplace --ref main
 ```
 
-Then install the plugin:
+Then install a plugin:
 
 ```shell
 codex plugin add vaadin-skills@vaadin-marketplace
+codex plugin add vaadin-agent-tools@vaadin-marketplace
 ```
 
-To inspect the available plugin before installing:
+To inspect the available plugins before installing:
 
 ```shell
 codex plugin list --marketplace vaadin-marketplace --available
@@ -97,7 +106,7 @@ Refresh Git-backed marketplace snapshots:
 codex plugin marketplace upgrade
 ```
 
-Then reinstall or update `vaadin-skills` if needed.
+Then reinstall or update `vaadin-skills` or `vaadin-agent-tools` if needed.
 
 ## Local Marketplace Testing
 
@@ -108,11 +117,13 @@ claude plugin marketplace add ./
 codex plugin marketplace add .
 ```
 
-Install the plugin from the local marketplace:
+Install a plugin from the local marketplace:
 
 ```shell
 claude plugin install vaadin-skills@vaadin-marketplace
+claude plugin install vaadin-agent-tools@vaadin-marketplace
 codex plugin add vaadin-skills@vaadin-marketplace
+codex plugin add vaadin-agent-tools@vaadin-marketplace
 ```
 
 ## Metadata
@@ -122,6 +133,8 @@ codex plugin add vaadin-skills@vaadin-marketplace
 - Codex marketplace metadata:
   [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
 
-Update plugin instructions, skills, MCP definitions, and plugin manifests in
-[`vaadin/agent-skills`](https://github.com/vaadin/agent-skills). Update this
+Update plugin instructions, skills, MCP definitions, and plugin manifests in the
+plugin repositories
+([`vaadin/agent-skills`](https://github.com/vaadin/agent-skills),
+[`vaadin/agent-tools`](https://github.com/vaadin/agent-tools)). Update this
 repository only when the marketplace catalog itself changes.
