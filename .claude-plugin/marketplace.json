@@ -1,7 +1,7 @@
 {
   "name": "vaadin-marketplace",
   "metadata": {
-    "description": "Vaadin 25 development skills and MCP tools for Claude Code"
+    "description": "Vaadin 25 development skills and MCP tools for Claude Code and Codex"
   },
   "owner": {
     "name": "Vaadin"
