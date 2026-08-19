@@ -5,9 +5,9 @@ Codex.
 
 The marketplace contains two plugins:
 
-- `vaadin-skills` - Vaadin 25 development skills and MCP tools for Java/Flow,
-  layouts, components, forms, testing, data access, and reactive state
-  management.
+- `vaadin-skills` - Vaadin 25 development skills for Java/Flow: Aura theming,
+  visual frontend design, and form and entity-editor layouts. Configures the
+  hosted Vaadin MCP server for current documentation and API lookup.
 - `vaadin-agent-tools` - Vaadin tools for AI agents to bootstrap, inspect, and
   validate Vaadin projects. Ships a self-contained native CLI (no Node or JVM
   required at runtime) that can scaffold a new Vaadin project from
